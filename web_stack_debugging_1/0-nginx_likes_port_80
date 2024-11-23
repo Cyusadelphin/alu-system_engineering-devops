@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Nginx install p80
+apt -get update -y
+apt -get install -y nginx
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo service nginx enable
+sudo service nginx start
